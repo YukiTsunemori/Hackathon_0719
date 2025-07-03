@@ -2,10 +2,10 @@
 // app/javascript/application.js
 
 // Hotwire Turbo (Rails newでデフォルトで入っています)
-import "@hotwired/turbo-rails"
+// import "@hotwired/turbo-rails"
 
 // Stimulus (Rails newでデフォルトで入っています)
-import "./controllers" // もしStimulusを使うなら。デフォルトでこの行があります。
+// import "./controllers" // もしStimulusを使うなら。デフォルトでこの行があります。
 
 // BootstrapのJavaScriptをインポート (Popper.jsが先)
 import * as Popper from '@popperjs/core'
