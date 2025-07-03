@@ -1,24 +1,5 @@
-# README
+# CodeBase卒業生によるハッカソン専用リポジトリ
+1. サーバーの立ち上げは``bin/dev``コマンドを使用してください。
+2. データベースはpostgresql@14を使用します。
+3. Railsのバージョンはgemfileを参照してください。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
