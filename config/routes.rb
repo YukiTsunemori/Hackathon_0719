@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root "pages#test_bootstrap"
+  root "posts#index"
+  resources :posts
 end
