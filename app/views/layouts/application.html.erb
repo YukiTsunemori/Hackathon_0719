@@ -25,5 +25,10 @@
 
   <body>
     <%= yield %>
+    <% if Rails.env.development? %>
+    <div class="debug-info">
+      <%= "#{controller.controller_name}##{controller.action_name}" %>
+    <% end %>
+    </div>
   </body>
 </html>
