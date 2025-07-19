@@ -1,19 +1,22 @@
+<% if @posts.empty? %>
+<h2>まだとうこうがありません</h2>
+<% else %>
 <div class="container container-sm">
+  <% @posts.each do |post| %>
   <div class="post-card border-black border-bottom">
     <div class="d-flex align-items-center mb-2">
       <div class="d-flex">
-        <p class="username mb-0">山田 太郎</p>
-        <p class="username mb-0">アカウント名</p>
+        <p class="username mb-0">山田 太郎<%#= post.name %></p>
       </div>
-      <small class="post-date">2025年7月19日 13:00</small>
+      <small class="post-date">e<%= l post.created_at, format: :short %></small>
     </div>
-    <p class="mb-0">今日はハッカソンに参加してきました！会場はトポセシア、参加人数は4人でした今日はハッカソンに参加してきました！会場はトポセシア、参加人数は4人でした</p>
-    <a href="/posts/2" class="btn btn-sm btn-link text-decoration-none">さらに表示</a>
+    <p class="mb-0"><%= post.text %></p>
+    <% link_to "さらに表示", post_path(post), class: "btn btn-sm btn-link text-decoration-none"%>
   </div>
+  <% end %>
 </div>
+<% end %>
 
+<%= link_to "投稿する", new_post_path, class: "btn btn-create" %>
 
-<a href="/posts/new" class="btn btn-create">
-  投稿する
-</a>
 
