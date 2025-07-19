@@ -11,6 +11,10 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.7",
-    "sass": "^1.89.2"
+    "local": "^0.3.3",
+    "modules": "^0.4.0",
+    "node": "^24.4.0",
+    "sass": "^1.89.2",
+    "yarn": "^1.22.22"
   }
 }
