@@ -1,4 +1,12 @@
-<%#= @post.user.name %>
-<%= @post.text %>
-<%= @post.created_at %>
-<%= link_to "削除", post_path(@post), data: { turbo_method: :delete, confirm: "削除しますか？" } %>
+<h1>投稿詳細</h1>
+
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title"><%#= post.user.name %></h5>
+      <p class="card-text"><%= @post.text %></p>
+      <p class="card-text"><small class="text-muted"><%= time_ago_in_words(@post.created_at) %>前</small></p>
+    </div>
+    <%= link_to "削除", post_path(@post), data: { turbo_method: :delete, confirm: "削除しますか？" } %>
+  </div>
+

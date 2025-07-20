@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.post_ordered
     # @posts = Post.joins(:user).select("posts.id, posts.text, posts.created_at, users.name as post_user").post_ordered
     # Userモデルが作成されたら上の1行に切り替える。
   end
