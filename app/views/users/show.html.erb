@@ -1,0 +1,9 @@
+<div class="container mt-5">
+    <div class="card">
+        <img src="https://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(@user.email.downcase) %>?s=200" class="card-img-top rounded-circle" alt="<%= @user.name %>">
+        <div class="card-body">
+        <p><strong>名前:</strong> <%= @user.name %></p>
+        <p><strong>メールアドレス:</strong> <%= @user.email %></p>
+        </div>
+    </div>
+</div>
