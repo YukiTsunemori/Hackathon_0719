@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   
   root "posts#index"
   get "posts/index"
-  resource :posts
+  resources :posts
   # get "/users/sign_out", to: "devise/sessions#destroy"
 end
