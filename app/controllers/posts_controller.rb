@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.post_ordered.limit(20)
+    @posts = Post.joins(:user).select("posts.id, posts.text, posts.created_at, users.name as post_user").post_ordered
     # @posts = Post.joins(:user).select("posts.id, posts.text, posts.created_at, users.name as post_user").post_ordered
     # Userモデルが作成されたら上の1行に切り替える。
   end
@@ -10,10 +10,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    # @post = current_user.post.build(post_params) userとpostの関連付けが終わったらこれを追加。
-    post = Post.new(post_params)
-    if post.save
+    # @post = Post.new
+    @post = current_user.posts.build(post_params) # userとpostの関連付けが終わったらこれを追加。
+    @posts = Post.joins(:user).select("posts.id, posts.text, posts.created_at, users.name as post_user").post_ordered
+    # @post = current_user.posts.build(post_params)
+    if @post.save
       redirect_to root_path, notice: "Post was successfully created."
     else
       flash.now[:alert] = "Post could not be created."
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-      params.require(:post).permit(:text)
+      params.require(:post).permit(:text, :post_user)
     # Userモデルが作成されたら、permitの引数に:post_userを追加する。
   end
 end
