@@ -1,22 +1,24 @@
 <% if @posts.empty? %>
-<h2>まだとうこうがありません</h2>
+<h2>まだ投稿がありません</h2>
 <% else %>
 <div class="container container-sm">
   <% @posts.each do |post| %>
-  <div class="post-card border-black border-bottom">
-    <div class="d-flex align-items-center mb-2">
+  <div class="post-card border-black border-bottom p-2">
+    <div class="d-flex  gap-2 align-items-center mb-2">
       <div class="d-flex">
-        <p class="username mb-0">山田 太郎<%#= post.name %></p>
+        <p class="username mb-0 fw-semibold">山田 太郎</p>
       </div>
       <small class="post-date">e<%= l post.created_at, format: :short %></small>
     </div>
     <p class="mb-0"><%= post.text %></p>
-    <% link_to "さらに表示", post_path(post), class: "btn btn-sm btn-link text-decoration-none"%>
+    <%= link_to "さらに表示", post_path(post), class: "btn btn-sm btn-link text-decoration-none fs-6 ms-auto"%>
   </div>
   <% end %>
 </div>
 <% end %>
 
-<%= link_to "投稿する", new_post_path, class: "btn btn-create" %>
+<%= link_to new_post_path, class: "btn btn-create" do %>
+  <%= image_tag "icon_new.svg", alt: "投稿", class:"btn__inner" %>
+<% end %>
 
 
