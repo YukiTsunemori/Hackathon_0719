@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%# <!DOCTYPE html>
 <html>
   <head>
     <title><%= content_for(:title) || "Posting" %></title>
@@ -19,7 +19,7 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
-    <%= javascript_include_tag :application, "data-turbo-track": "reload", type: "module" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %> 
     <%= javascript_importmap_tags %>
 
   </head>
@@ -42,6 +42,55 @@
     <% end %>
   </header>
   <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">CODEBASNS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <%= link_to "投稿一覧", posts_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "新規投稿", new_post_path, class: "nav-link" %>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <%# <% if user_signed_in? %> %>
+            <li class="nav-item">
+              <span class="navbar-text me-2">こんにちは〇〇さん</span>
+            </li>
+            <li class="nav-item">
+              ログアウト
+              <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %> %>
+            </li>
+          <%# <% else %> %>
+            <li class="nav-item">
+              ログイン
+              <%# <%= link_to "ログイン", new_user_session_path, class: "nav-link" %> %>
+            </li>
+            <li class="nav-item">
+              新規登録
+              <%# <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %> %>
+            </li>
+          <%# <% end %> %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
     <%= yield %>
+    </div>
+    <% if Rails.env.development? %>
+    <div class="debug-info">
+      <%= "#{controller.controller_name}##{controller.action_name}" %>
+    </div>
+    <% end %>
   </body>
-</html>
+</html> %>

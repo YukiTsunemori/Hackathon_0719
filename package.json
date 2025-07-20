@@ -9,6 +9,7 @@
     "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   },
   "dependencies": {
+    "@hotwired/turbo-rails": "github:hotwired/turbo-rails",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.7",
     "local": "^0.3.3",
