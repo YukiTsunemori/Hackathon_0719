@@ -57,6 +57,12 @@
   version "8.0.200"
   resolved "https://registry.npmjs.org/@rails/actioncable/-/actioncable-8.0.200.tgz"
   integrity sha512-EDqWyxck22BHmv1e+mD8Kl6GmtNkhEPdRfGFT7kvsv1yoXd9iYrqHDVAaR8bKmU/syC5eEZ2I5aWWxtB73ukMw==
+async@^2.0.0-rc.2:
+  version "2.6.4"
+  resolved "https://registry.npmjs.org/async/-/async-2.6.4.tgz"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
+  dependencies:
+    lodash "^4.17.14"
 
 bootstrap@^5.3.7:
   version "5.3.7"
@@ -142,6 +148,18 @@ is-number@^7.0.0:
   resolved "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+local@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.npmjs.org/local/-/local-0.3.3.tgz"
+  integrity sha512-SPjzMcYCtpFkuBgl2ivNR7HEvhwHlx8jbHN47lGlOkJ4na8BJEKtzQ9AXCldD0gbT70Er37ujqlCC9ylofEICg==
+  dependencies:
+    async "^2.0.0-rc.2"
+
+lodash@^4.17.14:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 micromatch@^4.0.5:
   version "4.0.8"
   resolved "https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz"
@@ -150,10 +168,27 @@ micromatch@^4.0.5:
     braces "^3.0.3"
     picomatch "^2.3.1"
 
+modules@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/modules/-/modules-0.4.0.tgz#7a856fd0d8a9e0a5c3e3bbbbab68960910ec8c89"
+  integrity sha512-LX4JgwPHJr1FurPDKp1BlGgMXqZXtxO1O8ABGmj2g15CbLGlInTHcA9flqw6uN6oYKE2T0ngWdiHvcX97mdBsw==
+
 node-addon-api@^7.0.0:
   version "7.1.1"
   resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.1.1.tgz"
   integrity sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==
+
+node-bin-setup@^1.0.0:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.1.4.tgz#e5a666044152b54d8d84b95297977ae07fd04047"
+  integrity sha512-vWNHOne0ZUavArqPP5LJta50+S8R261Fr5SvGul37HbEDcowvLjwdvd0ZeSr0r2lTSrPxl6okq9QUw8BFGiAxA==
+
+node@^24.4.0:
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-24.4.0.tgz#fd69554b5b4b9b10674d7df9e7d1ad33a9e32f39"
+  integrity sha512-IPMGt3XUfM12saFz9D3cFx9T7d8rvx8sIf/v2K3Jwgjrp8LyzO7bIrHZDR6XpiNRHX3hKvI7KzXti8zKRyr7Jg==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 picomatch@^2.3.1:
   version "2.3.1"
@@ -187,3 +222,8 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+yarn@^1.22.22:
+  version "1.22.22"
+  resolved "https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz"
+  integrity sha512-prL3kGtyG7o9Z9Sv8IPfBNrWTDmXB4Qbes8A9rEzt6wkJV8mUvoirjU0Mp3GGAU06Y0XQyA3/2/RQFVuK7MTfg==
