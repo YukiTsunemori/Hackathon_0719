@@ -1,11 +1,22 @@
-.btn-create {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+.btn {
+  &-create {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  &__inner {
+    width: 100%; 
+    height: 100%;
+    margin-left: 5px;
+    margin-bottom: 3px;
+  }
 }
+
