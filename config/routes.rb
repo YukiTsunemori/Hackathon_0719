@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     sessions: "users/sessions"
   }
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show]
   
   root "posts#index"
   get "posts/index"
