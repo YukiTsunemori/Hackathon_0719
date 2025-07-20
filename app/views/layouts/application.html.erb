@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%# <!DOCTYPE html>
 <html>
   <head>
     <title><%= content_for(:title) || "Posting" %></title>
@@ -19,8 +19,7 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
-    <%= javascript_include_tag :application, "data-turbo-track": "reload", type: "module" %>
-
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
@@ -72,7 +71,7 @@
     <% if Rails.env.development? %>
     <div class="debug-info">
       <%= "#{controller.controller_name}##{controller.action_name}" %>
-    <% end %>
     </div>
+    <% end %>
   </body>
-</html>
+</html> %>
