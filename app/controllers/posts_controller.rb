@@ -24,8 +24,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    # @replies = Reply.joins(:user).select("replies.id, replies,text, replies.created_at, users.name as reply_user").reply_ordered
-    # @reply = @post.replies.build
+    @replies = Reply.joins(:user).select("replies.id, replies,text, replies.created_at, users.name as reply_user").reply_ordered
+    @reply = @post.replies.build()
     # PostとUserの関連が終わったら上2行を追加
   end
 
@@ -42,4 +42,5 @@ class PostsController < ApplicationController
       params.require(:post).permit(:text, :post_user)
     # Userモデルが作成されたら、permitの引数に:post_userを追加する。
   end
+  
 end
